@@ -1,5 +1,5 @@
 ---
 language: es
-title: test
+title: Dando sentido a la nueva rueda de sabor de SCAA
 ---
 test
