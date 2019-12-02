@@ -100,7 +100,7 @@ export const pageQuery = graphql`
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: {
         frontmatter: {
-          templateKey: { eq: "blogs-post" }
+          templateKey: { eq: "blog-post" }
           language: { eq: $language }
         }
       }

@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-language: es
+language: en
 title: title 1
 ---
 Content 1
