@@ -2,10 +2,10 @@ const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+const locales = require('./src/constants/locales')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-
   return graphql(`
     {
       allMarkdownRemark(limit: 1000) {
@@ -33,6 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     posts.forEach(edge => {
       const id = edge.node.id
+      const language = edge.node.frontmatter.language
       createPage({
         path: edge.node.fields.slug,
         tags: edge.node.frontmatter.tags,
@@ -42,6 +43,7 @@ exports.createPages = ({ actions, graphql }) => {
         // additional data can be passed via context
         context: {
           id,
+          language
         },
       })
     })
@@ -66,6 +68,16 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve(`src/templates/tags.js`),
         context: {
           tag,
+        },
+      })
+    })
+
+    ['en', 'es'].forEach(lang => {
+      createPage({
+        path: `/blogs-${lang}/`,
+        component: path.resolve(`src/templates/BlogsRoll.js`),
+        context: {
+          language: lang,
         },
       })
     })
