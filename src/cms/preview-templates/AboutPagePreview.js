@@ -4,7 +4,7 @@ import { AboutPageTemplate } from '../../templates/about-page'
 import { IntlProvider } from 'react-intl'
 
 const AboutPagePreview = ({ entry, widgetFor }) => (
-  <IntlProvider locale='es'>
+  <IntlProvider locale='es' messages={{'title': 'My title test'}}>
   <AboutPageTemplate
     title={entry.getIn(['data', 'title'])}
     content={widgetFor('body')}

@@ -3,7 +3,8 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import { useIntl, FormattedMessage, injectIntl } from 'gatsby-plugin-intl'
+import { useIntl, injectIntl } from 'gatsby-plugin-intl'
+import { FormattedMessage } from 'react-intl'
 export const AboutPageTemplateBase = ({ title, content, contentComponent, intl }) => {
   const intl2 = useIntl()
   const PageContent = contentComponent || Content
