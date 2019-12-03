@@ -4,11 +4,13 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import { useIntl } from 'gatsby-plugin-intl'
+import { IntlProvider } from 'react-intl'
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const intl = useIntl()
   const PageContent = contentComponent || Content
 
   return (
+    <IntlProvider>
     <section className="section section--gradient">
       <div className="container">
         <div className="columns">
@@ -25,6 +27,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         </div>
       </div>
     </section>
+    </IntlProvider>
   )
 }
 
