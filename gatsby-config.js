@@ -1,3 +1,4 @@
+const locales = require('./src/constants/locales')
 module.exports = {
   siteMetadata: {
     title: 'Gatsby + Netlify CMS Starter',
@@ -78,11 +79,11 @@ module.exports = {
         // language JSON resource path
         path: `${__dirname}/src/i18n`,
         // supported language
-        languages: [`en`, `es`],
+        languages: Object.values(locales).map(value => value.path),
         // language file path
-        defaultLanguage: `en`,
+        defaultLanguage: Object.values(locales).filter(value => value.default)[0].path,
         // option to redirect to `/ko` when connecting `/`
-        redirect: true,
+        redirect: false,
       },
     },
     'gatsby-plugin-netlify', // make sure to keep it last in the array

@@ -74,7 +74,7 @@ exports.createPages = ({ actions, graphql }) => {
     const languages = ['en', 'es'];
     languages.forEach(lang => {
       createPage({
-        path: `/blogs-${lang}/`,
+        path: `/blogs/${lang}/`,
         component: path.resolve(`src/templates/BlogsRoll.js`),
         context: {
           language: lang,

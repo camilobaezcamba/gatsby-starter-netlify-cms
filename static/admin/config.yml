@@ -30,20 +30,20 @@ collections:
 
   - label: "Blog in English"
     name: "english_posts"
-    folder: "src/pages/blogs/en"
+    folder: "src/pages/blogs"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     filter: {field: "language", value: "en"}
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Language", name: "language", widget: "hidden", default: "es"}
+      - {label: "Language", name: "language", widget: "hidden", default: "en"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Content", name: "body", widget: "markdown"}
   - label: "Blog en Español"
     name: "spanish_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    folder: "src/pages/blogs/es"
+    folder: "src/pages/blogs"
     filter: {field: "language", value: "es"}
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
