@@ -1,19 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, StaticQuery } from 'gatsby'
+import { graphql, StaticQuery, Link } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
-import { injectIntl, Link } from "gatsby-plugin-intl"
 
 class BlogRoll extends React.Component {
   render() {
-    const { data, language } = this.props
+    const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
 
     return (
       <div className="columns is-multiline">
         {posts &&
-          posts.filter(({ node: post }) => {
-            return post.frontmatter.language === language}).map(({ node: post }) => (
+          posts.map(({ node: post }) => (
             <div className="is-parent column is-6" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
@@ -68,7 +66,7 @@ BlogRoll.propTypes = {
   }),
 }
 
-export default injectIntl( (intl) => (
+export default () => (
   <StaticQuery
     query={graphql`
       query BlogRollQuery {
@@ -102,7 +100,6 @@ export default injectIntl( (intl) => (
         }
       }
     `}
-    render={(data, count) => <BlogRoll data={data} count={count} language={intl.intl.locale}/>}
+    render={(data, count) => <BlogRoll data={data} count={count}/>}
   />
-)
 )

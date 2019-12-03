@@ -1,8 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import PreviewCompatibleImage from "../components/PreviewCompatibleImage";
-import { Link } from "gatsby-plugin-intl";
 import Layout from "../components/Layout";
 
 const BlogsPost = ({ data }) => {

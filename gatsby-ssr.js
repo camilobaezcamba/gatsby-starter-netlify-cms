@@ -1,3 +1,4 @@
+/*
 const IntlProvider = require('react-intl')
 exports.wrapRootComponent = (Root) => {
   const locale = 'en';
@@ -8,3 +9,4 @@ exports.wrapRootComponent = (Root) => {
   )
   return Wrapper;
 }
+*/
