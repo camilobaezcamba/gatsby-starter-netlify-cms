@@ -5,10 +5,12 @@ import Navbar from '../components/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
+import { IntlProvider } from 'react-intl'
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
   return (
+    <IntlProvider locale={'en'}>
     <div>
       <Helmet>
         <html lang="en" />
@@ -52,6 +54,7 @@ const TemplateWrapper = ({ children }) => {
       <div>{children}</div>
       <Footer />
     </div>
+    </IntlProvider>
   )
 }
 
