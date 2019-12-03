@@ -6,10 +6,10 @@ import es from '../../i18n/es';
 
 const AboutPagePreview = ({ entry, widgetFor }) => (
   <IntlProvider locale='es' messages={es}>
-  <AboutPageTemplate
-    title={entry.getIn(['data', 'title'])}
-    content={widgetFor('body')}
-  />
+    <AboutPageTemplate
+      title={entry.getIn(['data', 'title'])}
+      content={widgetFor('body')}
+    />
   </IntlProvider>  
 )
 

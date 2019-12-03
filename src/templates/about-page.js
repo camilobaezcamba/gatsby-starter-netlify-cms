@@ -5,6 +5,8 @@ import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 import { useIntl, injectIntl } from 'gatsby-plugin-intl'
 import { FormattedMessage } from 'react-intl'
+import { Link } from 'gatsby-plugin-intl'
+
 export const AboutPageTemplateBase = ({ title, content, contentComponent, intl }) => {
   const intl2 = useIntl()
   const PageContent = contentComponent || Content
@@ -22,6 +24,9 @@ export const AboutPageTemplateBase = ({ title, content, contentComponent, intl }
                 {}
                 <FormattedMessage id="title" />
               </h2>
+              <Link className="btn" to="/blog">
+                      Read more
+                    </Link>
               <PageContent className="content" content={content} />
             </div>
           </div>
