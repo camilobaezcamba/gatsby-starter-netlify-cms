@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-import { Link } from 'gatsby-plugin-intl'
+import { useTranslation } from "react-i18next";
+import i18n from '../i18n';
 
 export const IndexPageTemplate = ({
   image,
@@ -15,7 +16,10 @@ export const IndexPageTemplate = ({
   mainpitch,
   description,
   intro,
-}) => (
+}) => { 
+  const { t } = useTranslation();
+  console.log(t);
+  return  (
   <div>
     <div
       className="full-width-image margin-top-0"
@@ -74,6 +78,8 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="tile">
                     <h1 className="title">{mainpitch.title}</h1>
+
+                    {t('Welcome to React')}
                   </div>
                   <div className="tile">
                     <h3 className="subtitle">{mainpitch.description}</h3>
@@ -114,7 +120,7 @@ export const IndexPageTemplate = ({
     </section>
   </div>
 )
-
+}
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
