@@ -3,10 +3,9 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-import { useIntl } from 'gatsby-plugin-intl'
-import { IntlProvider } from 'react-intl'
-export const AboutPageTemplate = ({ title, content, contentComponent }) => {
-  const intl = useIntl()
+import { useIntl, FormattedMessage, injectIntl } from 'gatsby-plugin-intl'
+export const AboutPageTemplateBase = ({ title, content, contentComponent, intl }) => {
+  const intl2 = useIntl()
   const PageContent = contentComponent || Content
 
   return (
@@ -17,8 +16,12 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
             <div className="section">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
-                {intl.formatMessage({ id: "title" })}
+                {intl2.formatMessage({ id: "title" })}
                 {'aaa'}
+                <FormattedMessage id="title" />
+                {'bbb'}
+                {intl.formatMessage({ id: "title" })}
+                {'ccc'}
               </h2>
               <PageContent className="content" content={content} />
             </div>
@@ -29,7 +32,9 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   )
 }
 
-AboutPageTemplate.propTypes = {
+export const AboutPageTemplate = injectIntl(AboutPageTemplateBase)
+
+AboutPageTemplateBase.propTypes = {
   title: PropTypes.string.isRequired,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
