@@ -12,7 +12,7 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "bloga"
+  - name: "blog"
     label: "Blog"
     folder: "src/pages/blog"
     create: true
@@ -30,7 +30,7 @@ collections:
 
   - label: "Blog in English"
     name: "english_posts"
-    folder: "src/pages/blogs"
+    folder: "src/pages/blogs/en"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     filter: {field: "language", value: "en"}
@@ -43,7 +43,7 @@ collections:
     name: "spanish_posts"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    folder: "src/pages/blogs"
+    folder: "src/pages/blogs/es"
     filter: {field: "language", value: "es"}
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
