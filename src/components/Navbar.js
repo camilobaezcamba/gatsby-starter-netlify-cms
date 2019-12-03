@@ -1,12 +1,12 @@
 import React from 'react'
 import github from '../img/github-icon.svg'
-import { Link } from 'gatsby'
 import logo from '../img/logo.svg'
+import { injectIntl, Link } from "gatsby-plugin-intl"
 
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
-    const langKey = 'en'
+    const langKey = props.intl.locale
     this.state = {
       active: false,
       navBarActiveClass: '',
@@ -98,4 +98,4 @@ const Navbar = class extends React.Component {
   }
 }
 
-export default Navbar
+export default injectIntl(Navbar)
