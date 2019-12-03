@@ -1,4 +1,5 @@
 const locales = require('./src/constants/locales')
+console.log('default lang', Object.values(locales).filter(value => value.default)[0].path)
 module.exports = {
   siteMetadata: {
     title: 'Gatsby + Netlify CMS Starter',
@@ -81,7 +82,7 @@ module.exports = {
         // supported language
         languages: Object.values(locales).map(value => value.path),
         // language file path
-        defaultLanguage: Object.values(locales).filter(value => value.default)[0].path,
+        defaultLanguage: 'en',
         // option to redirect to `/ko` when connecting `/`
         redirect: false,
       },
