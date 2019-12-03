@@ -17,12 +17,10 @@ export const AboutPageTemplateBase = ({ title, content, contentComponent, intl }
             <div className="section">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
-                {intl2.formatMessage({ id: "title" })}
-                {'aaa'}
+              </h2>
+              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+                {}
                 <FormattedMessage id="title" />
-                {'bbb'}
-                {intl.formatMessage({ id: "title" })}
-                {'ccc'}
               </h2>
               <PageContent className="content" content={content} />
             </div>
