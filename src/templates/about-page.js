@@ -3,8 +3,9 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
-
+import { useIntl } from 'gatsby-plugin-intl'
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
+  const intl = useIntl()
   const PageContent = contentComponent || Content
 
   return (
@@ -15,6 +16,8 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
             <div className="section">
               <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
                 {title}
+                {intl.formatMessage({ id: "title" })}
+                {'asdf'}
               </h2>
               <PageContent className="content" content={content} />
             </div>
