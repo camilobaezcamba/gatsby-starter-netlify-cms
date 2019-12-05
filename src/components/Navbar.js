@@ -1,16 +1,14 @@
 import React from 'react'
 import github from '../img/github-icon.svg'
 import logo from '../img/logo.svg'
-import { injectIntl, Link } from "gatsby-plugin-intl"
+import { Link } from 'gatsby'
 
 const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
-    const langKey = props.intl.locale
     this.state = {
       active: false,
-      navBarActiveClass: '',
-      langKey
+      navBarActiveClass: ''
     }
   }
 
@@ -35,7 +33,6 @@ const Navbar = class extends React.Component {
   }
 
   render() {
-    console.log(this.state.langKey);
     return (
       <nav
         className="navbar is-transparent"
@@ -69,7 +66,7 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/products">
                 Products
               </Link>
-              <Link className="navbar-item" to={`/blogs/${this.state.langKey}`}>
+              <Link className="navbar-item" to={`/blogs`}>
                 Blog
               </Link>
               <Link className="navbar-item" to="/contact">
@@ -98,4 +95,4 @@ const Navbar = class extends React.Component {
   }
 }
 
-export default injectIntl(Navbar)
+export default Navbar

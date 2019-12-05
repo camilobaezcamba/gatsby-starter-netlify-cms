@@ -77,9 +77,8 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="content">
                   <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-
-                    {t('Welcome to React')}
+                  <h1 className="title">{mainpitch.title}</h1>
+                  <h1 className="title">{t('Welcome to React')}</h1>
                   </div>
                   <div className="tile">
                     <h3 className="subtitle">{mainpitch.description}</h3>

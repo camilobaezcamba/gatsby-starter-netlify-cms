@@ -2,7 +2,6 @@ const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
-const locales = require('./src/constants/locales')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
@@ -68,17 +67,6 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve(`src/templates/tags.js`),
         context: {
           tag,
-        },
-      })
-    })
-
-    const languages = Object.values(locales);
-    languages.forEach(lang => {
-      createPage({
-        path: `/blogs/${lang.path}`,
-        component: path.resolve(`src/templates/BlogsRoll.js`),
-        context: {
-          language: lang.path,
         },
       })
     })
