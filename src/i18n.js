@@ -9,12 +9,32 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 const resources = {
   en: {
     translation: {
-      "Welcome to React": "Welcome to React and react-i18next"
+      "title": "Gatsby English",
+      "conductor": "Driver",
+      "enterate": "Find out more",
+      "sumate": "Join the staff",
+      "contacto": "Contact",
+      "corporativo": "Corporate",
+      "ayuda": "Help",
+      "beneficios": "Benefits",
+      "terminos": "Terms and conditions",
+      "politicas": "Policies",
+      "español": "Spanish"
     }
   },
   es: {
     translation: {
-      "Welcome to React": "Bienvenido a React y react-i18next"
+      "title": "Gatsby Español",
+      "conductor": "Conductor",
+      "enterate": "Entérate más",
+      "sumate": "Sumate al staff",
+      "contacto": "Contacto",
+      "corporativo": "Corporativo",
+      "ayuda": "Ayuda",
+      "beneficios": "Beneficios",
+      "terminos": "Términos y condiciones",
+      "politicas": "Políticas",
+      "español": "Español"
     }
   }
 };
