@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
 
-import withI18next from "../components/withI18next";
-
 const IndexPageTemplate = ({
   image,
   title,
@@ -14,7 +12,6 @@ const IndexPageTemplate = ({
   intro,
 }) => { 
   const { t } = useTranslation();
-  console.log(t);
   return  (
   <div>
     <div
@@ -129,9 +126,8 @@ IndexPageTemplate.propTypes = {
 }
 
 
-const IndexPage = ({ pageContext: { locale }, t, data }) => {
+const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  console.log(t)
   return (
       <IndexPageTemplate
         image={frontmatter.image}
@@ -153,7 +149,7 @@ IndexPage.propTypes = {
   }),
 }
 
-export default withI18next({ ns: "common" })(IndexPage)
+export default IndexPage
 
 export const pageQuery = graphql`
   query IndexPageTemplate {
