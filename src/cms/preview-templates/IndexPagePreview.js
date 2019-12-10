@@ -2,12 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/index-page'
 import withI18next from "../../components/withI18next";
+import i18n from '../../i18nnew';
 
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
   if (data) {
     return (
-
+    <I18nextProvider i18n={i18n}>
       <IndexPageTemplate
         image={data.image}
         title={data.title}
@@ -17,6 +18,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
         intro={data.intro || { blurbs: [] }}
         mainpitch={data.mainpitch || {}}
       />
+    </I18nextProvider>
     )
   } else {
     return <div>Loading...</div>

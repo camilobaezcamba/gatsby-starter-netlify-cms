@@ -3,6 +3,17 @@ const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+
+const fse = require("fs-extra")
+exports.onPostBuild = () => {
+  console.log("Copying locales")
+  fse.copySync(
+    path.join(__dirname, "/src/locales"),
+    path.join(__dirname, "/public/locales")
+  )
+}
+
+
 const localesNSContent = {
   en: [
     {
