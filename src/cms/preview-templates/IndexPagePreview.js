@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/index-page'
-import withI18next from "../../components/withI18next";
+import "../../i18noroginal"
 
-const IndexPagePreview = ({ entry, getAsset, t }) => {
+const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
-  console.log(t)
   if (data) {
     return (
 
@@ -31,4 +30,4 @@ IndexPagePreview.propTypes = {
   getAsset: PropTypes.func,
 }
 
-export default withI18next({ ns: "common" })(IndexPagePreview)
+export default IndexPagePreview
