@@ -5,10 +5,9 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
-import { useTranslation } from "react-i18next";
-import '../i18n';
+import withI18next from "../components/withI18next";
 
-export const IndexPageTemplate = ({
+const IndexPageTemplate = ({
   image,
   title,
   heading,
@@ -132,9 +131,10 @@ IndexPageTemplate.propTypes = {
   }),
 }
 
-const IndexPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
 
+const IndexPage = ({ pageContext: { locale }, t, data }) => {
+  const { frontmatter } = data.markdownRemark
+  console.log(t)
   return (
     <Layout>
       <IndexPageTemplate
@@ -158,7 +158,7 @@ IndexPage.propTypes = {
   }),
 }
 
-export default IndexPage
+export default withI18next({ ns: "common" })(IndexPage)
 
 export const pageQuery = graphql`
   query IndexPageTemplate {

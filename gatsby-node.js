@@ -1,77 +1,65 @@
+const fs = require("fs");
 const _ = require('lodash')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { fmImagesToRelative } = require('gatsby-remark-relative-images')
-
-exports.createPages = ({ actions, graphql }) => {
-  const { createPage } = actions
-  return graphql(`
+const localesNSContent = {
+  en: [
     {
-      allMarkdownRemark(limit: 1000) {
-        edges {
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              tags
-              templateKey
-            }
-          }
-        }
-      }
+      content: fs.readFileSync(`src/locales/en/common.json`, "utf8"),
+      ns: "common"
     }
-  `).then(result => {
-    if (result.errors) {
-      result.errors.forEach(e => console.error(e.toString()))
-      return Promise.reject(result.errors)
+  ],
+  fr: [
+    {
+      content: fs.readFileSync(`src/locales/fr/common.json`, "utf8"),
+      ns: "common"
+    }
+  ]
+};
+
+const availableLocales = [
+  { value: "fr", text: "Francais" },
+  { value: "en", text: "English" }
+];
+
+// default locales don't end up in a specific locale route i.e example.com for english and example.com/fr for franch
+const defaultLocales = { value: "fr", text: "Francais" };
+
+exports.onCreatePage = async props => {
+  const {
+    page,
+    actions: { createPage, deletePage, createRedirect }
+  } = props;
+
+  if (/^\/dev-404-page\/?$/.test(page.path)) {
+    return;
+  }
+
+  deletePage(page);
+
+  availableLocales.map(({ value }) => {
+    let newPath = `/${value}${page.path}`;
+    if (defaultLocales.value === value) {
+      newPath = page.path;
     }
 
-    const posts = result.data.allMarkdownRemark.edges
-
-    posts.forEach(edge => {
-      const id = edge.node.id
-      const language = edge.node.frontmatter.language
-      createPage({
-        path: edge.node.fields.slug,
-        tags: edge.node.frontmatter.tags,
-        component: path.resolve(
-          `src/templates/${String(edge.node.frontmatter.templateKey)}.js`
-        ),
-        // additional data can be passed via context
-        context: {
-          id,
-          language
-        },
-      })
-    })
-
-    // Tag pages:
-    let tags = []
-    // Iterate through each post, putting all found tags into `tags`
-    posts.forEach(edge => {
-      if (_.get(edge, `node.frontmatter.tags`)) {
-        tags = tags.concat(edge.node.frontmatter.tags)
+    const localePage = {
+      ...page,
+      originalPath: page.path,
+      path: newPath,
+      context: {
+        availableLocales,
+        locale: value,
+        routed: true,
+        data: localesNSContent[value],
+        originalPath: page.path
       }
-    })
-    // Eliminate duplicate tags
-    tags = _.uniq(tags)
+    };
+    createPage(localePage);
+  });
+};
 
-    // Make tag pages
-    tags.forEach(tag => {
-      const tagPath = `/tags/${_.kebabCase(tag)}/`
-
-      createPage({
-        path: tagPath,
-        component: path.resolve(`src/templates/tags.js`),
-        context: {
-          tag,
-        },
-      })
-    })
-  })
-}
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions

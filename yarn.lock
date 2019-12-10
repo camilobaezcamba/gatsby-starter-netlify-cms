@@ -1510,6 +1510,11 @@
     semver "^6.3.0"
     tsutils "^3.17.1"
 
+"@wapps/langtag-utils@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@wapps/langtag-utils/-/langtag-utils-1.0.2.tgz#e763c21d4e47a8f12a6f7e86169968ea4b12d080"
+  integrity sha512-BzFvu4olCPfmXkoADMdLVW10n43MNBQ/Ruq3OBMce7Yu4NYyx+cQhL28OMivbrOxyWyX7lnhm+OBUK7vUX1aLQ==
+
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
   resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.8.5.tgz#51b1c5fe6576a34953bf4b253df9f0d490d9e359"
@@ -5916,6 +5921,15 @@ gatsby-graphiql-explorer@^0.2.29:
   integrity sha512-qKnG1h/BSBkdPX5eUcFRVvHb0BA7WLnqeJ8NMH2AOv5VSK8YEwUdJVimZHz8M/59MKBtFAQyDCRU258sc1oWrQ==
   dependencies:
     "@babel/runtime" "^7.7.4"
+
+gatsby-i18n@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/gatsby-i18n/-/gatsby-i18n-1.1.8.tgz#3fa4d6e7c2872afef1b9366d8a1dc848cb800788"
+  integrity sha512-RyvSW42G/sqSkh5wej0zgKwdMsN0SQsTDrBrrs6ajNzLlTW6vkwh6oKuXFPeMlqbPZETyRhPJXq/jv+M/I8mOw==
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    "@wapps/langtag-utils" "^1.0.2"
+    react-helmet "^5.2.0"
 
 gatsby-image@^2.0.23:
   version "2.2.34"

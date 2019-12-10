@@ -1,20 +1,27 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import backend from "i18next-xhr-backend";
+import i18n from "i18next";
+export const defaultLocale = "en";
+export const defaultNamespace = "common";
 
-i18n
-  .use(backend)
-  .use(initReactI18next) // passes i18n down to react-i18next
-  .init({
-    backend: {
-      loadPath: '/locales/{{lng}}.json',
-    },
-    lng: "es",
-    fallbackLng: "es",
+export const options = {
+  fallbackLng: defaultLocale,
+  ns: [defaultNamespace],
+  defaultNS: defaultNamespace,
 
-    interpolation: {
-      escapeValue: false
-    }
-  });
+  debug: false,
 
-export default i18n;
+  interpolation: {
+    escapeValue: false // not needed for react!!
+  },
+
+  react: {
+    wait: false
+  },
+
+  initImmediate: false // Important for SSR to work
+};
+
+export default () => {
+  i18n.init(options);
+
+  return i18n;
+};
