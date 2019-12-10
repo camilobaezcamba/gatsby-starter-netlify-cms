@@ -2,7 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/index-page'
 import { IntlProvider } from 'react-intl'
-
+import { addLocaleData } from 'react-intl';
+import localeData from 'react-intl/locale-data/en';
+addLocaleData(localeData);
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
 
