@@ -6,13 +6,13 @@ i18n
   .init({
     resources:{
       en: {
-        translations: {
-          'Welcome to React': 'Welcome to React'
+        translation: {
+          'hello': 'Welcome to React'
         }
       }, 
       es: {
-        translations: {
-          'Welcome to React': 'Bienvenido a React'
+        translation: {
+          'hello': 'Bienvenido a React'
         }
       }
     },
