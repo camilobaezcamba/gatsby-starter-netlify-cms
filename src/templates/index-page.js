@@ -2,9 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql, Link } from 'gatsby'
 
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
 import withI18next from "../components/withI18next";
 
 const IndexPageTemplate = ({
@@ -91,7 +88,7 @@ const IndexPageTemplate = ({
                     <p>{description}</p>
                   </div>
                 </div>
-                <Features gridItems={intro.blurbs} />
+                
                 <div className="columns">
                   <div className="column is-12 has-text-centered">
                     <Link className="btn" to="/products">
@@ -136,7 +133,6 @@ const IndexPage = ({ pageContext: { locale }, t, data }) => {
   const { frontmatter } = data.markdownRemark
   console.log(t)
   return (
-    <Layout>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
@@ -146,7 +142,6 @@ const IndexPage = ({ pageContext: { locale }, t, data }) => {
         description={frontmatter.description}
         intro={frontmatter.intro}
       />
-    </Layout>
   )
 }
 
