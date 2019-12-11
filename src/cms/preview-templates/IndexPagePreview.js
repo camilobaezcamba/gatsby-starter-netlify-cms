@@ -9,7 +9,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   if (data) {
     console.log(navigator.language)
     return (
-      <IntlProvider locale={'eens'} messages={{'title': 'Test title'}}>
+      <IntlProvider locale={'en'} messages={{'title': 'Test title'}}>
         <IndexPageTemplate
           image={data.image}
           title={data.title}
