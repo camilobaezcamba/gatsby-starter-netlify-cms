@@ -11981,7 +11981,7 @@ react-dnd@^7.3.2:
     invariant "^2.1.0"
     shallowequal "^1.1.0"
 
-react-dom@^16.8.4:
+react-dom@^16.6.0, react-dom@^16.8.4:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.12.0.tgz#0da4b714b8d13c2038c9396b54a92baea633fe11"
   integrity sha512-LMxFfAGrcS3kETtQaCkTKjMiifahaMySFDn71fZUNpPHZQEzmk/GiAeIT8JSOrHB23fnuCOMruL2a8NYlw+8Gw==
@@ -12049,6 +12049,15 @@ react-input-autosize@^2.2.1:
   integrity sha512-jQJgYCA3S0j+cuOwzuCd1OjmBmnZLdqQdiLKRYrsMMzbjUrVDS5RvJUDwJqA7sKuksDuzFtm6hZGKFu7Mjk5aw==
   dependencies:
     prop-types "^15.5.8"
+
+react-intl-context@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-intl-context/-/react-intl-context-1.0.3.tgz#7480113cbf5507f3c90ced1aa2ed546b65ece44c"
+  integrity sha512-NCP39jNnGcshj51QK5exVK05B2Yz1ybQJYwYGRW9nEa0x16k09mzDdlSpi+uJu+WlOLiG2iaK5p2UMVDp6v1ug==
+  dependencies:
+    prop-types "^15.6.2"
+    react "^16.6.0"
+    react-dom "^16.6.0"
 
 react-intl@^3.4.0:
   version "3.9.2"
@@ -12283,7 +12292,7 @@ react-waypoint@^8.1.0:
     prop-types "^15.0.0"
     react-is "^16.6.3"
 
-react@^16.12.0, react@^16.8.4:
+react@^16.12.0, react@^16.6.0, react@^16.8.4:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
   integrity sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==
