@@ -1,12 +1,11 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 
 export default () => {
   // Will use default Namespace.
-  const { t } = useTranslation();
+  console.log(t('hello'))
   return (
     <>
-      <h1>{t("howToChild")}</h1>
+      <h1>test</h1>
     </>
   );
 };

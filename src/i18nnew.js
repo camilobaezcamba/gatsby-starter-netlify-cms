@@ -18,5 +18,6 @@ i18n
     react: {
       wait: true,
     },
+    initImmediate: false 
   })
 export default i18n

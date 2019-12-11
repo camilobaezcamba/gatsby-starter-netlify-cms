@@ -1,7 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { graphql, Link } from 'gatsby'
-import { useTranslation } from "react-i18next";
+
+import { graphql } from 'gatsby'
+
+import Layout from '../components/Layout'
+import Features from '../components/Features'
+import BlogRoll from '../components/BlogRoll'
+
+import { useIntl, Link } from "gatsby-plugin-intl"
 
 export const IndexPageTemplate = ({
   image,
@@ -12,7 +18,12 @@ export const IndexPageTemplate = ({
   description,
   intro,
 }) => { 
+<<<<<<< HEAD
   const { t } = useTranslation();
+=======
+  const intl = useIntl()
+
+>>>>>>> ca61308ad458c2fee5213daf34f0823188f010d2
   return  (
   <div>
     <div
@@ -59,7 +70,7 @@ export const IndexPageTemplate = ({
             padding: '0.25em',
           }}
         >
-          {subheading}
+          {intl.formatMessage({ id: "title" })}
         </h3>
       </div>
     </div>
@@ -72,7 +83,11 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="tile">
                   <h1 className="title">{mainpitch.title}</h1>
+<<<<<<< HEAD
                   <h1 className="title">{t('hello')}</h1>
+=======
+                  <h1 className="title">{intl.formatMessage({ id: "title" })}</h1>
+>>>>>>> ca61308ad458c2fee5213daf34f0823188f010d2
                   </div>
                   <div className="tile">
                     <h3 className="subtitle">{mainpitch.description}</h3>
