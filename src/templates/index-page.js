@@ -7,7 +7,6 @@ import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
 import { useIntl, Link } from "gatsby-plugin-intl"
-import { IntlProvider } from 'react-intl'
 
 export const IndexPageTemplate = ({
   image,
@@ -21,7 +20,7 @@ export const IndexPageTemplate = ({
   const intl = useIntl()
 
   return  (
-    <IntlProvider locale={'en'} messages={{'title': 'Test title'}}>
+  <div>
     <div
       className="full-width-image margin-top-0"
       style={{
@@ -118,7 +117,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section>
-  </IntlProvider>
+  </div>
 )
 }
 IndexPageTemplate.propTypes = {
