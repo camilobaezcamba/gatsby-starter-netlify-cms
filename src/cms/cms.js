@@ -9,10 +9,10 @@ import IndexPagePreview from './preview-templates/IndexPagePreview'
 import { IntlProvider } from 'react-intl'
 
 
-const customIndex = ()=> 
+const customIndex = (props)=> 
      (
         <IntlProvider locale={'en'} messages={{'title': 'Test title'}} defaultLocale="en">
-            <IndexPagePreview/>
+            <IndexPagePreview {...props} />
         </IntlProvider>
     )
 
