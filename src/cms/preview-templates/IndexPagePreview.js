@@ -1,7 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/index-page'
-import { IntlProvider } from 'react-intl'
+import {createIntl, createIntlCache, RawIntlProvider} from 'react-intl'
+
+// This is optional but highly recommended
+// since it prevents memory leak
+const cache = createIntlCache()
+
+const intl = createIntl({
+  locale: 'en',
+  messages: {}
+}, cache)
 
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
@@ -9,7 +18,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
   if (data) {
     console.log(navigator.language)
     return (
-      <IntlProvider locale={'eens'} messages={{en: {'title': 'Test title'}}}>
+      <RawIntlProvider value={intl}>
         <IndexPageTemplate
           image={data.image}
           title={data.title}
@@ -19,7 +28,7 @@ const IndexPagePreview = ({ entry, getAsset }) => {
           intro={data.intro || { blurbs: [] }}
           mainpitch={data.mainpitch || {}}
         />
-      </IntlProvider>
+      </RawIntlProvider>
 
     )
   } else {
