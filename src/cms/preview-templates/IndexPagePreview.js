@@ -1,16 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/index-page'
-import { IntlProvider } from 'gatsby-plugin-intl';
 
 
 const IndexPagePreview = ({ entry, getAsset, intl }) => {
   const data = entry.getIn(['data']).toJS()
-  console.log(intl )
   if (data) {
-    console.log(navigator.language)
     return (
-      <IntlProvider locale={'en'} messages={{'title': 'Test title'}} defaultLocale="en">
         <IndexPageTemplate
           image={data.image}
           title={data.title}
@@ -20,7 +16,6 @@ const IndexPagePreview = ({ entry, getAsset, intl }) => {
           intro={data.intro || { blurbs: [] }}
           mainpitch={data.mainpitch || {}}
         />
-      </IntlProvider>
 
     )
   } else {
