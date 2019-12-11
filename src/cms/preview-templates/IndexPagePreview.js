@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/index-page'
-import { IntlProvider } from 'react-intl-context';
+import { IntlProvider } from 'gatsby-plugin-intl';
 
 
 const IndexPagePreview = ({ entry, getAsset, intl }) => {
