@@ -9,7 +9,7 @@ const cache = createIntlCache()
 
 const intl = createIntl({
   locale: 'en',
-  messages: {}
+  messages: {en: {'title': 'Titulo de prueba'}}
 }, cache)
 
 const IndexPagePreview = ({ entry, getAsset }) => {
