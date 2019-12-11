@@ -35,4 +35,4 @@ IndexPagePreview.propTypes = {
   getAsset: PropTypes.func,
 }
 
-export default injectIntl(IndexPagePreview)
+export default IndexPagePreview
