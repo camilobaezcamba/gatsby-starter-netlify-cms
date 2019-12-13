@@ -27,6 +27,8 @@ collections:
       - {label: "Featured Image", name: "featuredimage", widget: image}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Requisitos en ingles", name: requisitos, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Items, name: items, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: string}, {label: Text, name: text, widget: markdown}]}]}
+      - {label: "Requisitos en español", name: requisitos, widget: object, fields: [{label: Encabezado, name: heading, widget: string}, {label: Descripcion, name: description, widget: text}, {label: Items, name: items, widget: list, fields: [{label: Imagen, name: image, widget: image}, {label: Título, name: title, widget: string}, {label: Texto, name: text, widget: markdown}]}]}
 
   - label: "Blog in English"
     name: "english_posts"
