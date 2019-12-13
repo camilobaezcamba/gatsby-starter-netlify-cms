@@ -11,6 +11,20 @@ featuredimage: /img/flavor_wheel.jpg
 tags:
   - flavor
   - tasting
+requisitosen:
+  description: 'Aqui se carga una descripcion '
+  heading: Titulo de Requisitos en ingles
+  items:
+    - image: /img/blog-index.jpg
+      title: Paso 1
+      body: '**Texto de paso 1 en Markdown**'
+requisitoses:
+  description: descripcion de requisitos en espanol
+  heading: Titulo de requisitos en español
+  items:
+    - image: /img/apple-touch-icon.png
+      title: Titulo de un requisito
+      body: Descripcion del requisito
 ---
 ![flavor wheel](/img/flavor_wheel.jpg)
 
