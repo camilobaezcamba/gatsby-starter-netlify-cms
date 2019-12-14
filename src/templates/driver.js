@@ -25,7 +25,7 @@ export const DriverPageTemplate = ({
         </Flex>
       </Banner>
       {/*Banner*/}
-      <Banner bg={banner.image.childImageSharp.fluid.src}>
+      <Banner bg={!!banner.image.childImageSharp ? banner.image.childImageSharp.fluid.src : banner.image}>
         <Flex>
           <Box width={[1, 5 / 12]}>
             <h2>{banner.title}</h2>
