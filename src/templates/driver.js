@@ -11,6 +11,7 @@ export const DriverPageTemplate = ({
   headingButton,
   banner
 }) => {
+  console.log('Driver Page Template')
   return (
     <>
       <Banner fullscreen bg={image.childImageSharp.fluid.src}>
