@@ -19,17 +19,18 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Title Español", name: "title_es", widget: "string"}
+      - {label: "Title Ingles", name: "title_en", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Description Español", name: "description_es", widget: "text"}
+      - {label: "Description Ingles", name: "description_en", widget: "text"}
       - {label: "Language", name: "language", widget: "select", options: ["en", "es"]}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
-      - {label: "Requisitos en ingles", name: requisitosen, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: text}, {label: Items, name: items, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: string}, {label: Text, name: body, widget: markdown}]}]}
-      - {label: "Requisitos en español", name: requisitoses, widget: object, fields: [{label: Encabezado, name: heading, widget: string}, {label: Descripcion, name: description, widget: text}, {label: Items, name: items, widget: list, fields: [{label: Imagen, name: image, widget: image}, {label: Título, name: title, widget: string}, {label: Texto, name: body, widget: markdown}]}]}
-
+      - {label: "Descripcion Español", name: "body_es", widget: "markdown"}
+      - {label: "Descripcion Inglés", name: "body_en", widget: "markdown"}
+      - {label: "Descripcion Inglés", name: "body", widget: "markdown"}
+    
   - label: "Blog in English"
     name: "english_posts"
     folder: "src/pages/blogs/en"
@@ -56,6 +57,23 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/driver/index.md"
+        label: "Driver Page"
+        name: "driver"
+        identifier_field: heading
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "driver"}
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading, name: heading, widget: string}
+          - {label: Heading Button, name: headingButton, widget: string}
+          - {label: Banner, name: banner, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Button, name: button, widget: text}, {label: Image, name: image, widget: image}]}
+          - {label: Requeriments, name: requeriments, widget: list, fields: [
+             {label: Image, name: image, widget: image},
+             {label: Tittle, name: title, widget: text},
+             {label: Description, name: description, widget: markdown}
+             ]}
+
       - file: "src/pages/index.md"
         label: "Landing Page"
         name: "index"

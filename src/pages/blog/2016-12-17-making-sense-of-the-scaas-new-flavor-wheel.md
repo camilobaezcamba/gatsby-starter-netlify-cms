@@ -25,6 +25,8 @@ requisitoses:
     - image: /img/apple-touch-icon.png
       title: Titulo de un requisito
       body: Descripcion del requisito
+body_en: '**Texto de paso 1 en Ingles**'
+body_es: '**Texto de paso 1 en ESpanol**'
 ---
 ![flavor wheel](/img/flavor_wheel.jpg)
 

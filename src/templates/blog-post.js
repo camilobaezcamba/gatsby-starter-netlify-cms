@@ -5,6 +5,8 @@ import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import remark from "remark"
+import remarkHTML from "remark-html"
 
 export const BlogPostTemplate = ({
   content,
@@ -56,11 +58,15 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
-
+  const body_en = remark()
+      .use(remarkHTML)
+      .processSync(post.frontmatter.body_en)
+      .toString();
+  console.log(post.frontmatter)
   return (
     <Layout>
       <BlogPostTemplate
-        content={post.html}
+        content={body_en}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
@@ -97,6 +103,7 @@ export const pageQuery = graphql`
         title
         description
         tags
+        body_en
       }
     }
   }
