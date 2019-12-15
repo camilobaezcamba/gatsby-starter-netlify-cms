@@ -23,7 +23,7 @@ export const DriverPageTemplate = ({
         bg={
           !!image.childImageSharp
             ? image.childImageSharp.fluid.src
-            : banner.image
+            : image
         }
       >
         <Flex justifyContent="center" textAlign="center" alignItems="center">
@@ -75,24 +75,36 @@ export const toHml = markdown => {
     .toString();
 };
 
-const DriverPage = ({ data }) => {
+export const dataWhitLang = data => {
   const { i18n } = useTranslation();
   const lang = i18n.language;
-  const { frontmatter } = data.markdownRemark;
-  const heading = frontmatter[`heading_${lang}`];
-  const headingButton = frontmatter[`headingButton_${lang}`];
-  const image = frontmatter.image;
+  const heading = data[`heading_${lang}`];
+  const headingButton = data[`headingButton_${lang}`];
+  const image = data.image;
   const banner = {
-    title: frontmatter.banner[`title_${lang}`],
-    button: frontmatter.banner[`button_${lang}`],
-    description: frontmatter.banner[`description_${lang}`],
-    image: frontmatter.banner.image
+    title: data.banner[`title_${lang}`],
+    button: data.banner[`button_${lang}`],
+    description: data.banner[`description_${lang}`],
+    image: data.banner.image
   };
-  const requeriments = frontmatter.requeriments.map(item => ({
+  const requeriments = data.requeriments.map(item => ({
     title: item[`title_${lang}`],
     description: toHml(item[`description_${lang}`]),
     image: item.image
   }));
+
+  return {
+    heading,
+    headingButton,
+    image,
+    banner,
+    requeriments
+  }
+}
+
+const DriverPage = ({ data }) => {
+  const { frontmatter } = data.markdownRemark;
+  const { heading, headingButton, image, banner, requeriments} = dataWhitLang(frontmatter);
 
   return (
     <Layout>

@@ -1,26 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { DriverPageTemplate } from '../../templates/driver'
+import { DriverPageTemplate, dataWhitLang } from '../../templates/driver'
 import Layout from "../../components/Layout"
 
 const DriverPagePreview = ({ entry, getAsset }) => {
-  const data = entry.getIn(['data']).toJS()
-  console.log(data)
-  console.log(getAsset(entry.getIn(['data', 'image'])))
-  console.log(getAsset(entry.getIn(['data', 'banner', 'image'])))
-  const entryBlurbs = entry.getIn(['data', 'requeriments'])
-  const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
-  console.log(entryBlurbs)
-  console.log(blurbs)
+  const { heading, headingButton, image, banner, requeriments} = dataWhitLang(entry.getIn(['data']).toJS());
   if (data) {
     return (
       <Layout>
         <DriverPageTemplate
-          image={data.image}
-          title={data.title}
-          heading={data.heading}
-          headingButton={data.headingButton}
-          banner={data.banner || { requeriments: [] }}
+          image={image}
+          title={title}
+          heading={heading}
+          headingButton={headingButton}
+          banner={banner || {}}
+          requeriments={requeriments || []}
         />
       </Layout>
 
