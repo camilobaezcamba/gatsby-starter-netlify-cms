@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { DriverPageTemplate, dataWhitLang } from '../../templates/driver'
+import { DriverPageTemplate, DataWhitLang } from '../../templates/driver'
 import Layout from "../../components/Layout"
 
 const DriverPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
   if (data) {
-    const { heading, headingButton, image, banner, requeriments} = dataWhitLang(data);
+    const { heading, headingButton, image, banner, requeriments} = DataWhitLang(data);
     return (
       <Layout>
         <DriverPageTemplate

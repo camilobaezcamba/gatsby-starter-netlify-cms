@@ -5,9 +5,10 @@ import { Rounded } from "../components/buttons";
 import { Box, Flex } from "../components/Flex";
 import { graphql } from "gatsby";
 import { useTranslation } from "react-i18next";
-import { HTMLContent } from "../components/Content";
 import remark from "remark";
 import remarkHTML from "remark-html";
+import Requeriments from "../components/Requeriments"
+
 export const DriverPageTemplate = ({
   image,
   heading,
@@ -16,6 +17,7 @@ export const DriverPageTemplate = ({
   requeriments
 }) => {
   console.log("Driver Page Template");
+  console.log(requeriments)
   return (
     <>
       <Banner
@@ -35,13 +37,7 @@ export const DriverPageTemplate = ({
           </Box>
         </Flex>
       </Banner>
-      {requeriments &&
-        requeriments.map(item => {
-          return (
-          <div>
-            <HTMLContent content={item.description}></HTMLContent>
-          </div>)
-        })}
+      <Requeriments requeriments={requeriments}></Requeriments>
       <Banner
         bg={
           !!banner.image.childImageSharp
@@ -75,7 +71,7 @@ export const toHml = markdown => {
     .toString();
 };
 
-export const dataWhitLang = data => {
+export const DataWhitLang = data => {
   const { i18n } = useTranslation();
   const lang = i18n.language;
   const heading = data[`heading_${lang}`];
@@ -104,7 +100,7 @@ export const dataWhitLang = data => {
 
 const DriverPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  const { heading, headingButton, image, banner, requeriments} = dataWhitLang(frontmatter);
+  const { heading, headingButton, image, banner, requeriments} = DataWhitLang(frontmatter);
 
   return (
     <Layout>
