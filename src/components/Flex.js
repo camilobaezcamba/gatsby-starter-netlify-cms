@@ -10,6 +10,7 @@ const fluid = css`
 export const Flex = styled(props => <Reflexbox {...props} />)`
   margin: auto;
   flex-wrap: wrap;
+  width: 100%
 
   ${props => (props.fluid ? fluid : "padding: 0 26px")};
 `
