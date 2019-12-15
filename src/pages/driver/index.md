@@ -15,6 +15,9 @@ banner:
   image: /img/coffee-gear.png
   title_en: Start winning
   title_es: Empezá a ganar
+
+requerimentsTitle_en: Requirements to be a driver
+requerimentsTitle_es: Requisitos para ser conductor
 requeriments:
   - description_en: text
     description_es: |-

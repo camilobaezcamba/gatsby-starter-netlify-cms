@@ -14,6 +14,7 @@ export const DriverPageTemplate = ({
   heading,
   headingButton,
   banner,
+  requerimentsTitle,
   requeriments
 }) => {
   console.log("Driver Page Template");
@@ -37,7 +38,14 @@ export const DriverPageTemplate = ({
           </Box>
         </Flex>
       </Banner>
-      <Requeriments requeriments={requeriments}></Requeriments>
+      <Flex justifyContent="center" textAlign="center" alignItems="center" sx={{color: 'title'}}>
+          <Box width={1}>
+            <h1>{requerimentsTitle}</h1>
+          </Box>
+          <Box  width={1}>
+            <Requeriments requeriments={requeriments}></Requeriments>
+          </Box>
+        </Flex>
       <Banner
         bg={
           !!banner.image.childImageSharp
@@ -83,6 +91,7 @@ export const DataWhitLang = data => {
     description: data.banner[`description_${lang}`],
     image: data.banner.image
   };
+  const requerimentsTitle = data[`requerimentsTitle_${lang}`];
   const requeriments = data.requeriments.map(item => ({
     title: item[`title_${lang}`],
     description: toHml(item[`description_${lang}`]),
@@ -94,13 +103,14 @@ export const DataWhitLang = data => {
     headingButton,
     image,
     banner,
+    requerimentsTitle,
     requeriments
   }
 }
 
 const DriverPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  const { heading, headingButton, image, banner, requeriments} = DataWhitLang(frontmatter);
+  const { heading, headingButton, image, banner, requerimentsTitle, requeriments} = DataWhitLang(frontmatter);
 
   return (
     <Layout>
@@ -109,6 +119,7 @@ const DriverPage = ({ data }) => {
         headingButton={headingButton}
         image={image}
         banner={banner}
+        requerimentsTitle={requerimentsTitle}
         requeriments={requeriments}
       />
     </Layout>
@@ -145,12 +156,14 @@ export const pageQuery = graphql`
             }
           }
         }
+        requerimentsTitle_en
+        requerimentsTitle_es
         requeriments {
           title_en
           title_es
           image {
             childImageSharp {
-              fluid(maxWidth: 1140, quality: 100) {
+              fluid(maxWidth: 350, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }
