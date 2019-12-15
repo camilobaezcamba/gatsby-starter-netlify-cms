@@ -4,6 +4,7 @@ import useSiteMetadata from "./SiteMetadata"
 import { withPrefix } from "gatsby"
 import { ThemeProvider } from "styled-components"
 import theme from "../utils/theme"
+import "../i18n"
 import { BreakpointProvider } from "react-socks"
 import TranslateComponentItem from "./TranslateComponentItem"
 

@@ -60,19 +60,28 @@ collections:
       - file: "src/pages/driver/index.md"
         label: "Driver Page"
         name: "driver"
-        identifier_field: heading
+        identifier_field: heading_en
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "driver"}
-          - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
-          - {label: Heading, name: heading, widget: string}
-          - {label: Heading Button, name: headingButton, widget: string}
-          - {label: Banner, name: banner, widget: object, fields: [{label: Title, name: title, widget: string}, {label: Description, name: description, widget: text}, {label: Button, name: button, widget: text}, {label: Image, name: image, widget: image}]}
+          - {label: Heading in English, name: heading_en, widget: string}
+          - {label: Heading in Spanish, name: heading_es, widget: string}
+          - {label: Heading Button in English, name: headingButton_en, widget: string}
+          - {label: Heading Button in Spanish, name: headingButton_es, widget: string}
+          - {label: Banner, name: banner, widget: object, fields: [
+            {label: Title in English, name: title_en, widget: string}, 
+            {label: Title in Spanish, name: title_es, widget: string}, 
+            {label: Description in English, name: description_en, widget: text}, 
+            {label: Description in Spanish, name: description_es, widget: text}, 
+            {label: Button in English, name: button_en, widget: text}, 
+            {label: Button in Spanish, name: button_es, widget: text}, 
+            {label: Image, name: image, widget: image}]}
           - {label: Requeriments, name: requeriments, widget: list, fields: [
-             {label: Image, name: image, widget: image},
-             {label: Tittle, name: title, widget: text},
-             {label: Description, name: description, widget: markdown}
-             ]}
+            {label: Image, name: image, widget: image},
+            {label: Tittle in English, name: title_en, widget: text},
+            {label: Tittle in Spanish, name: title_es, widget: text},
+            {label: Description in English, name: description_en, widget: markdown},
+            {label: Description in Spanish, name: description_es, widget: markdown}]}
 
       - file: "src/pages/index.md"
         label: "Landing Page"

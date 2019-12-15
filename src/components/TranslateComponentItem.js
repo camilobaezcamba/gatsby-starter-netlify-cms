@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 
 const TranslateComponentItem = (props) => {
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const options = [
     { value: 'es', label: `${t('spanish')}` },
