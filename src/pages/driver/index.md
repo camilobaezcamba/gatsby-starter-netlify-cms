@@ -15,22 +15,38 @@ banner:
   image: /img/coffee-gear.png
   title_en: Start winning
   title_es: Empezá a ganar
-
 requerimentsTitle_en: Requirements to be a driver
 requerimentsTitle_es: Requisitos para ser conductor
 requeriments:
-  - description_en: text
+  - description_en: |-
+      * Máximo 12 años de antigüedad; 4 puertas (hasta 3 en caso de ser van)
+      * En caso de no ser dueño del vehículo **Autorización del titular**
     description_es: |-
-      **text**
-
-      ****
-
-      # **asdf**
+      * Máximo 12 años de antigüedad; 4 puertas (hasta 3 en caso de ser van)
+      * En caso de no ser dueño del vehículo **Autorización del titular**
     image: /img/coffee.png
     title_en: Requeriment 1
     title_es: Requerimento 1
-  - description_en: text
-    description_es: text
+  - description_en: |-
+      * Documentos al día
+        * Cédula de identidad
+        * Registro de conducir
+        * Cédula verde del Automotor o Contrato
+        * Habilitación Vehicular
+      * RUC o Factura de terceros (hasta 2 veces)
+      * Póliza de seguros contra terceros
+      * Póliza para pasajeros
+      * Antecedentes policiales
+    description_es: |-
+      * Documentos al día
+        * Cédula de identidad
+        * Registro de conducir
+        * Cédula verde del Automotor o Contrato
+        * Habilitación Vehicular
+      * RUC o Factura de terceros (hasta 2 veces)
+      * Póliza de seguros contra terceros
+      * Póliza para pasajeros
+      * Antecedentes policiales
     image: /img/coffee-gear.png
     title_en: Requeriment 2
     title_es: Requerimento 2
