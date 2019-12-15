@@ -5,6 +5,8 @@ import Layout from "../../components/Layout"
 
 const DriverPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
+  console.log(getAsset(entry.getIn(['data', 'image'])))
+  console.log(data.image)
   if (data) {
     return (
       <Layout>
