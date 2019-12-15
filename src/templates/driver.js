@@ -14,7 +14,7 @@ export const DriverPageTemplate = ({
   console.log('Driver Page Template')
   return (
     <>
-      <Banner fullscreen bg={image.childImageSharp.fluid.src}>
+      <Banner fullscreen bg={!!image.childImageSharp ? image.childImageSharp.fluid.src : banner.image}>
         <Flex justifyContent="center" textAlign="center" alignItems="center">
           <Box width={1}>
             <h1>{heading}</h1>
