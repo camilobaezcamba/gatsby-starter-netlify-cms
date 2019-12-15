@@ -1,6 +1,6 @@
 ---
 templateKey: driver
-image: /img/chemex.jpg
+image: /img/driver/chemex.jpg
 heading_en: Win with MUV
 heading_es: Ganá con MUV
 headingButton_en: Requeriments
@@ -12,10 +12,10 @@ banner:
     Upload your documents and everything related to your vehicle for
     verification
   description_es: Cargá tus documentos y todo lo relacionado a tu vehículo para verificación
-  image: /img/coffee-gear.png
+  image: /img/driver/coffee-gear.png
   title_en: Start winning
   title_es: Empezá a ganar
-requerimentsTitle_en: Requirements to be a driver
+requerimentsTitle_en: Requeriments to be a driver
 requerimentsTitle_es: Requisitos para ser conductor
 requeriments:
   - description_en: |-
@@ -38,7 +38,7 @@ requeriments:
       * Póliza de seguros contra terceros
       * Póliza para pasajeros
       * Antecedentes policiales
-    image: /img/coffee-gear.png
+    image: /img/driver/coffee.png
     title_en: Documents
     title_es: Documentos
   - description_en: |-
@@ -47,7 +47,7 @@ requeriments:
     description_es: |-
       * Máximo 12 años de antigüedad; 4 puertas (hasta 3 en caso de ser van)
       * En caso de no ser dueño del vehículo **Autorización del titular**
-    image: /img/coffee.png
+    image: /img/driver/coffee.png
     title_en: Vehicle
     title_es: Vehículo
   - description_en: |-
@@ -56,7 +56,7 @@ requeriments:
     description_es: |-
       * Smartphone (Android 5/ iOS 10)
       * Plan de datos
-    image: /img/coffee.png
+    image: /img/driver/coffee.png
     title_en: Requeriments
     title_es: Requerimientos
 ---
