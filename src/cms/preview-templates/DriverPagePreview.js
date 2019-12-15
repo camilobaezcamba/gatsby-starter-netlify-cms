@@ -8,7 +8,7 @@ const DriverPagePreview = ({ entry, getAsset }) => {
   console.log(data)
   console.log(getAsset(entry.getIn(['data', 'image'])))
   console.log(getAsset(entry.getIn(['data', 'banner', 'image'])))
-  const entryBlurbs = entry.getIn(['data', 'banner', 'requerimentos'])
+  const entryBlurbs = entry.getIn(['data', 'requeriments'])
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
   console.log(entryBlurbs)
   console.log(blurbs)
