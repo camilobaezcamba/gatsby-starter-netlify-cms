@@ -5,16 +5,6 @@ heading_en: Win with MUV
 heading_es: Ganá con MUV
 headingButton_en: Requeriments
 headingButton_es: Requisitos
-banner:
-  button_en: Register
-  button_es: Registrate
-  description_en: >-
-    Upload your documents and everything related to your vehicle for
-    verification
-  description_es: Cargá tus documentos y todo lo relacionado a tu vehículo para verificación
-  image: /img/driver/coffee-gear.png
-  title_en: Start winning
-  title_es: Empezá a ganar
 requerimentsTitle_en: Requeriments to be a driver
 requerimentsTitle_es: Requisitos para ser conductor
 requeriments:
@@ -59,4 +49,15 @@ requeriments:
     image: /img/driver/coffee.png
     title_en: Requeriments
     title_es: Requerimientos
+banner:
+  button_en: Register
+  button_es: Registrate
+  description_en: >-
+    Upload your documents and everything related to your vehicle for
+    verification
+  description_es: Cargá tus documentos y todo lo relacionado a tu vehículo para verificación
+  image: /img/abc-1.5x.svg
+  title_en: Start winning
+  title_es: Empezá a ganar
 ---
+
