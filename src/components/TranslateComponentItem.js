@@ -26,7 +26,7 @@ const TranslateComponentItem = (props) => {
     fontWeight: "500"}),
     option: (styles, { isDisabled, isFocused, isSelected }) => {
       const color = "#FF7F00";
-      const lightColor = 'white';
+      const lightColor = 'black';
       return {
         ...styles,
         backgroundColor: isDisabled
@@ -40,7 +40,7 @@ const TranslateComponentItem = (props) => {
 
         ':active': {
           ...styles[':active'],
-          color: "white",
+          color: "black",
           backgroundColor: !isDisabled && (isSelected ? color : lightColor),
         },
       };
