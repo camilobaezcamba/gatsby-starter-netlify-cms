@@ -19,15 +19,6 @@ requerimentsTitle_en: Requirements to be a driver
 requerimentsTitle_es: Requisitos para ser conductor
 requeriments:
   - description_en: |-
-      * Máximo 12 años de antigüedad; 4 puertas (hasta 3 en caso de ser van)
-      * En caso de no ser dueño del vehículo **Autorización del titular**
-    description_es: |-
-      * Máximo 12 años de antigüedad; 4 puertas (hasta 3 en caso de ser van)
-      * En caso de no ser dueño del vehículo **Autorización del titular**
-    image: /img/coffee.png
-    title_en: Requeriment 1
-    title_es: Requerimento 1
-  - description_en: |-
       * Documentos al día
         * Cédula de identidad
         * Registro de conducir
@@ -48,7 +39,24 @@ requeriments:
       * Póliza para pasajeros
       * Antecedentes policiales
     image: /img/coffee-gear.png
-    title_en: Requeriment 2
-    title_es: Requerimento 2
+    title_en: Documents
+    title_es: Documentos
+  - description_en: |-
+      * Máximo 12 años de antigüedad; 4 puertas (hasta 3 en caso de ser van)
+      * En caso de no ser dueño del vehículo **Autorización del titular**
+    description_es: |-
+      * Máximo 12 años de antigüedad; 4 puertas (hasta 3 en caso de ser van)
+      * En caso de no ser dueño del vehículo **Autorización del titular**
+    image: /img/coffee.png
+    title_en: Vehicle
+    title_es: Vehículo
+  - description_en: |-
+      * Smartphone (Android 5/ iOS 10)
+      * Plan de datos
+    description_es: |-
+      * Smartphone (Android 5/ iOS 10)
+      * Plan de datos
+    image: /img/coffee.png
+    title_en: Requeriments
+    title_es: Requerimientos
 ---
-
