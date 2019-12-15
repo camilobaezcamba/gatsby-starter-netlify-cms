@@ -5,6 +5,7 @@ import { withPrefix } from "gatsby"
 import { ThemeProvider } from "styled-components"
 import theme from "../utils/theme"
 import { BreakpointProvider } from "react-socks"
+import TranslateComponentItem from "./TranslateComponentItem"
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -49,6 +50,7 @@ const TemplateWrapper = ({ children }) => {
             content={`${withPrefix("/")}img/og-image.jpg`}
           />
         </Helmet>
+        <TranslateComponentItem></TranslateComponentItem>
         <div>{children}</div>
       </BreakpointProvider>
     </ThemeProvider>
