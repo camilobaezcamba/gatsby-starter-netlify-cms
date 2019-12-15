@@ -5,8 +5,13 @@ import Layout from "../../components/Layout"
 
 const DriverPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
+  console.log(data)
   console.log(getAsset(entry.getIn(['data', 'image'])))
-  console.log(data.image)
+  console.log(getAsset(entry.getIn(['data', 'banner', 'image'])))
+  const entryBlurbs = entry.getIn(['data', 'banner', 'requerimentos'])
+  const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
+  console.log(entryBlurbs)
+  console.log(blurbs)
   if (data) {
     return (
       <Layout>
@@ -15,7 +20,7 @@ const DriverPagePreview = ({ entry, getAsset }) => {
           title={data.title}
           heading={data.heading}
           headingButton={data.headingButton}
-          banner={data.banner || { requisitos: [] }}
+          banner={data.banner || { requeriments: [] }}
         />
       </Layout>
 

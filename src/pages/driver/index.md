@@ -13,15 +13,15 @@ banner:
   button_en: Register
   button_es: Registrate
   image: /img/coffee-gear.png
-  requeriments:
-    - image: /img/coffee.png
-      title_en: Requeriment 1
-      title_es: Requerimento 1
-      description_en: text
-      description_es: text
-    - image: /img/coffee-gear.png
-      title_en: Requeriment 2
-      title_es: Requerimento 2
-      description_en: text
-      description_es: text
+requeriments:
+  - image: /img/coffee.png
+    title_en: Requeriment 1
+    title_es: Requerimento 1
+    description_en: text
+    description_es: text
+  - image: /img/coffee-gear.png
+    title_en: Requeriment 2
+    title_es: Requerimento 2
+    description_en: text
+    description_es: text
 ---
