@@ -77,9 +77,9 @@ collections:
             {label: Button in Spanish, name: button_es, widget: text}, 
             {label: Image, name: image, widget: image}]}
           - {label: Requeriments, name: requeriments, widget: list, fields: [
-            {label: Image, name: image, widget: image},
             {label: Tittle in English, name: title_en, widget: text},
             {label: Tittle in Spanish, name: title_es, widget: text},
+            {label: Image, name: image, widget: image},
             {label: Description in English, name: description_en, widget: markdown},
             {label: Description in Spanish, name: description_es, widget: markdown}]}
 
