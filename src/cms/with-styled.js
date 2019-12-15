@@ -2,7 +2,9 @@
 
 import React from "react";
 import { StyleSheetManager } from "styled-components";
-import "../utils/typography"
+import typography from  "../utils/typography"
+import { TypographyStyle } from 'react-typography'
+
 export default Component => props => {
   const iframe = document.querySelector("#nc-root iframe");
   const iframeHeadElem = iframe && iframe.contentDocument.head;
@@ -13,6 +15,7 @@ export default Component => props => {
 
   return (
     <StyleSheetManager target={iframeHeadElem}>
+      <TypographyStyle typography={typography} />
       <Component {...props} />
     </StyleSheetManager>
   );
