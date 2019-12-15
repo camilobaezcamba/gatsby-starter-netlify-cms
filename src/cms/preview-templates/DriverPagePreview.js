@@ -6,7 +6,7 @@ import Layout from "../../components/Layout"
 const DriverPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
   if (data) {
-    const { heading, headingButton, image, banner, requeriments} = DataWhitLang(data);
+    const { heading, headingButton, image, banner, requerimentsTitle, requeriments} = DataWhitLang(data);
     return (
       <Layout>
         <DriverPageTemplate
@@ -14,6 +14,7 @@ const DriverPagePreview = ({ entry, getAsset }) => {
           heading={heading}
           headingButton={headingButton}
           banner={banner || {}}
+          requerimentsTitle={requerimentsTitle}
           requeriments={requeriments || []}
         />
       </Layout>
