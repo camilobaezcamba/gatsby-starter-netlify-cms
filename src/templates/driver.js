@@ -55,7 +55,8 @@ const DriverPage = ({ data }) => {
     title: frontmatter.banner[`headingButton_${lang}`],
     button: frontmatter.banner[`headingButton_${lang}`],
     description: frontmatter.banner[`headingButton_${lang}`],
-    requeriments: frontmatter.banner.requeriments
+    requeriments: frontmatter.banner.requeriments,
+    image: frontmatter.banner.image
   }
   banner.requeriments = {
     title: banner.requeriments[`headingButton_${lang}`],
