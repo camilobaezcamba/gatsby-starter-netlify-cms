@@ -1,16 +1,16 @@
 ---
 templateKey: driver
-heading_en: Ganá con MUV
+heading_en: Win with MUV
 heading_es: Ganá con MUV
 image: /img/chemex.jpg
-headingButton_en: Requisitos
+headingButton_en: Requeriments
 headingButton_es: Requisitos
 banner:
-  title_en: Empezá a ganar
+  title_en: Start winning
   title_es: Empezá a ganar
-  description_en: Cargá tus documentos y todo lo relacionado a tu vehículo para verificación
+  description_en: Upload your documents and everything related to your vehicle for verification
   description_es: Cargá tus documentos y todo lo relacionado a tu vehículo para verificación
-  button_en: Registrate
+  button_en: Register
   button_es: Registrate
   image: /img/coffee-gear.png
   requeriments:

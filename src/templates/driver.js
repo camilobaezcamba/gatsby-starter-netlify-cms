@@ -42,7 +42,6 @@ export const DriverPageTemplate = ({
 }
 
 const DriverPage = ({ data }) => {
-  console.log(data.markdownRemark)
   const { i18n } = useTranslation();
   const lang = i18n.language;
   const {
@@ -52,15 +51,15 @@ const DriverPage = ({ data }) => {
   const headingButton = frontmatter[`headingButton_${lang}`]
   const image = frontmatter.image
   const banner = {
-    title: frontmatter.banner[`headingButton_${lang}`],
-    button: frontmatter.banner[`headingButton_${lang}`],
-    description: frontmatter.banner[`headingButton_${lang}`],
-    requeriments: frontmatter.banner.requeriments,
-    image: frontmatter.banner.image
+    title: frontmatter.banner[`title_${lang}`],
+    button: frontmatter.banner[`button_${lang}`],
+    description: frontmatter.banner[`description_${lang}`],
+    image: frontmatter.banner.image,
+    requeriments: frontmatter.banner.requeriments
   }
   banner.requeriments = {
-    title: banner.requeriments[`headingButton_${lang}`],
-    description: banner.requeriments[`headingButton_${lang}`],
+    title: banner.requeriments[`title_${lang}`],
+    description: banner.requeriments[`description_${lang}`],
     image: banner.requeriments.image
   }
   return (
