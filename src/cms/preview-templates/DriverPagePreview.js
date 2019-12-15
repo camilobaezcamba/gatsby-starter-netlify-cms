@@ -4,8 +4,9 @@ import { DriverPageTemplate, dataWhitLang } from '../../templates/driver'
 import Layout from "../../components/Layout"
 
 const DriverPagePreview = ({ entry, getAsset }) => {
-  const { heading, headingButton, image, banner, requeriments} = dataWhitLang(entry.getIn(['data']).toJS());
+  const data = entry.getIn(['data']).toJS()
   if (data) {
+    const { heading, headingButton, image, banner, requeriments} = dataWhitLang(data);
     return (
       <Layout>
         <DriverPageTemplate
