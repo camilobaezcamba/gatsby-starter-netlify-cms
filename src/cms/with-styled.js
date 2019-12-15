@@ -2,7 +2,7 @@
 
 import React from "react";
 import { StyleSheetManager } from "styled-components";
-
+import "../utils/typography"
 export default Component => props => {
   const iframe = document.querySelector("#nc-root iframe");
   const iframeHeadElem = iframe && iframe.contentDocument.head;
