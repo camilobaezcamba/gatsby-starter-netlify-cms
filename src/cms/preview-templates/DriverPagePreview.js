@@ -11,7 +11,6 @@ const DriverPagePreview = ({ entry, getAsset }) => {
       <Layout>
         <DriverPageTemplate
           image={image}
-          title={title}
           heading={heading}
           headingButton={headingButton}
           banner={banner || {}}
