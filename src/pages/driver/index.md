@@ -1,6 +1,6 @@
 ---
 templateKey: driver
-image: /img/driver/chemex.jpg
+image: /img/chemex.jpg
 heading_en: Win with MUV
 heading_es: Ganá con MUV
 headingButton_en: Requeriments
@@ -28,7 +28,7 @@ requeriments:
       * Póliza de seguros contra terceros
       * Póliza para pasajeros
       * Antecedentes policiales
-    image: /img/driver/coffee.png
+    image: /img/coffee.png
     title_en: Documents
     title_es: Documentos
   - description_en: |-
@@ -37,7 +37,7 @@ requeriments:
     description_es: |-
       * Máximo 12 años de antigüedad; 4 puertas (hasta 3 en caso de ser van)
       * En caso de no ser dueño del vehículo **Autorización del titular**
-    image: /img/driver/coffee.png
+    image: /img/coffee.png
     title_en: Vehicle
     title_es: Vehículo
   - description_en: |-
@@ -46,7 +46,7 @@ requeriments:
     description_es: |-
       * Smartphone (Android 5/ iOS 10)
       * Plan de datos
-    image: /img/driver/coffee.png
+    image: /img/coffee.png
     title_en: Requeriments
     title_es: Requerimientos
 banner:

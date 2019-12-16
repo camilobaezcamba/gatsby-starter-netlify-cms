@@ -136,8 +136,8 @@ export const pageQuery = graphql`
         headingButton_es
         image {
           childImageSharp {
-            fluid(maxWidth: 1140, quality: 100) {
-              ...GatsbyImageSharpFluid
+            fixed(width: 400) {
+              ...GatsbyImageSharpFixed
             }
           }
         }
