@@ -1,10 +1,14 @@
 import CMS from 'netlify-cms-app'
-import uploadcare from 'netlify-cms-media-library-uploadcare'
-import cloudinary from 'netlify-cms-media-library-cloudinary'
+import withStyled from "./with-styled";
 
 import IndexPagePreview from './preview-templates/IndexPagePreview'
-
-CMS.registerMediaLibrary(uploadcare)
-CMS.registerMediaLibrary(cloudinary)
+import DriverPagePreview from './preview-templates/DriverPagePreview'
 
 CMS.registerPreviewTemplate('index', IndexPagePreview)
+
+CMS.registerPreviewTemplate('driver', withStyled(DriverPagePreview))
+CMS.registerPreviewTemplate('about', AboutPagePreview)
+CMS.registerPreviewTemplate('products', ProductPagePreview)
+CMS.registerPreviewTemplate('blog', BlogPostPreview)
+CMS.registerPreviewTemplate('english_posts', BlogPostPreview)
+CMS.registerPreviewTemplate('spanish_posts', BlogPostPreview)

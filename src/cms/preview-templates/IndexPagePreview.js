@@ -1,17 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { IndexPageTemplate } from '../../templates/index-page'
-import { IntlProvider } from 'react-intl'
-import { addLocaleData } from 'react-intl';
-import localeData from 'react-intl/locale-data/en';
-addLocaleData(localeData);
 
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
+  console.log(data)
   if (data) {
-    console.log(navigator.language)
     return (
-      <IntlProvider locale={'es'} language={'es'}>
         <IndexPageTemplate
           image={data.image}
           title={data.title}
@@ -21,7 +16,6 @@ const IndexPagePreview = ({ entry, getAsset }) => {
           intro={data.intro || { blurbs: [] }}
           mainpitch={data.mainpitch || {}}
         />
-      </IntlProvider>
     )
   } else {
     return <div>Loading...</div>

@@ -2,7 +2,7 @@ import React from "react";
 
 export default () => {
   // Will use default Namespace.
-  console.log(t('hello'))
+  console.log('asdf')
   return (
     <>
       <h1>test</h1>

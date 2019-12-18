@@ -19,15 +19,18 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Title Español", name: "title_es", widget: "string"}
+      - {label: "Title Ingles", name: "title_en", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Description Español", name: "description_es", widget: "text"}
+      - {label: "Description Ingles", name: "description_en", widget: "text"}
       - {label: "Language", name: "language", widget: "select", options: ["en", "es"]}
       - {label: "Featured Post", name: "featuredpost", widget: "boolean"}
       - {label: "Featured Image", name: "featuredimage", widget: image}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
-
+      - {label: "Descripcion Español", name: "body_es", widget: "markdown"}
+      - {label: "Descripcion Inglés", name: "body_en", widget: "markdown"}
+      - {label: "Descripcion Inglés", name: "body", widget: "markdown"}
+    
   - label: "Blog in English"
     name: "english_posts"
     folder: "src/pages/blogs/en"
@@ -54,6 +57,34 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
+      - file: "src/pages/driver/index.md"
+        label: "Driver Page"
+        name: "driver"
+        identifier_field: heading_en
+        fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "driver"}
+          - {label: Image, name: image, widget: image}
+          - {label: Heading in English, name: heading_en, widget: string}
+          - {label: Heading in Spanish, name: heading_es, widget: string}
+          - {label: Heading Button in English, name: headingButton_en, widget: string}
+          - {label: Heading Button in Spanish, name: headingButton_es, widget: string}
+          - {label: Requeriments Title in English, name: requerimentsTitle_en, widget: string} 
+          - {label: Requeriments Title in Spanish, name: requerimentsTitle_es, widget: string}
+          - {label: Requeriments, name: requeriments, widget: list, fields: [
+            {label: Tittle in English, name: title_en, widget: string},
+            {label: Tittle in Spanish, name: title_es, widget: string},
+            {label: Image, name: image, widget: image},
+            {label: Description in English, name: description_en, widget: markdown},
+            {label: Description in Spanish, name: description_es, widget: markdown}]}
+          - {label: Banner, name: banner, widget: object, fields: [
+            {label: Title in English, name: title_en, widget: string}, 
+            {label: Title in Spanish, name: title_es, widget: string}, 
+            {label: Description in English, name: description_en, widget: text}, 
+            {label: Description in Spanish, name: description_es, widget: text}, 
+            {label: Button in English, name: button_en, widget: string}, 
+            {label: Button in Spanish, name: button_es, widget: string}, 
+            {label: Image, name: image, widget: image}]}
+
       - file: "src/pages/index.md"
         label: "Landing Page"
         name: "index"
