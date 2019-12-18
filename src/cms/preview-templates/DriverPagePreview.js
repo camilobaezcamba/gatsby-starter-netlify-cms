@@ -5,6 +5,8 @@ import Layout from "../../components/Layout"
 
 const DriverPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS()
+  console.log(data)
+
   if (data) {
     const { heading, headingButton, image, banner, requerimentsTitle, requeriments} = DataWhitLang(data);
     return (
