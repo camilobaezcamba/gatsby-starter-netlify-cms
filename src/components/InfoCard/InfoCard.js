@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Box, Flex } from "reflexbox/styled-components"
 import PropTypes from "prop-types"
-import { MyHTMLContent } from "./elements"
 import { useCurrentBreakpointName } from 'react-socks'
 import PreviewCompatibleImage from "../PreviewCompatibleImage"
 
@@ -66,7 +65,7 @@ const InfoCard = ({ title, subtitle, detail, logo, align}) => {
           </>
         )}
         {detail && !(detail instanceof Array) && (
-          <MyHTMLContent content={detail}></MyHTMLContent>
+         {detail}
         )}
         {detail && detail instanceof Array && getList(detail)}
       </Box>
