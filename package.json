@@ -45,7 +45,7 @@
     "react-spring": "^8.0.27",
     "react-typography": "^0.16.19",
     "reflexbox": "^4.0.6",
-    "remark-html": "^10.0.0",
+    "remark-html": "^13.0.2",
     "styled-components": "^4.4.1",
     "typography": "^0.16.19",
     "uuid": "^3.2.1"
